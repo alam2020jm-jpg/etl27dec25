@@ -1,4 +1,5 @@
-function_frame
+import functions_framework
+@functions_framework.http
 from google.cloud import dataproc_v1
 from datetime import datetime
 def my_function(cloud_event):
