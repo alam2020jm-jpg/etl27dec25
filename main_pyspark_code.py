@@ -18,9 +18,11 @@ df.write.format("csv")\
   .option('mode',"append")\
   .option("header",True)\
   .save(gcs_Out_path)
+print(f"Processed data Sink Sucessfully at bucket:-{gcs_Out_path}")
 df.write.format("bigquery")\
   .option('table',bq_out_table)\
   .option("TemporaryGCSBucket","gs://tembqpath")\
   .option('mode',"append")\
   .save()
+print(f"Processed Data Sink Sucessfully at Table:-{bq_out_table}")
 spark.stop()
