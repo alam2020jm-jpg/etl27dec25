@@ -7,7 +7,7 @@ def my_function(cloud_event):
     file_name=data.get("name")
     project_id="b27dec25"
     region="us-central1"
-    main_pyspark_code="gs://mainpysparkjob"
+    main_pyspark_code="gs://mainpysparkjob/main_pyspark_code.py"
     input_path=f"gs://{bucket}/{file_name}"
     gcs_output=f"gs://processed27dec25/output"
     bq_table="b27dec25.t27dec25.et27dec25"
